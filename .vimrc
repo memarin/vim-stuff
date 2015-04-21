@@ -20,8 +20,11 @@ Plugin 'Valloric/YouCompleteMe'
 Plugin 'majutsushi/tagbar'
 Plugin 'tpope/vim-surround'
 Plugin 'mattn/emmet-vim'
-Plugin 'kien/ctrlp.vim'
 Plugin 'ntpeters/vim-better-whitespace'
+Plugin 'nathanaelkane/vim-indent-guides'
+Plugin 'wincent/command-t'
+Plugin 'tpope/vim-endwise'
+Plugin 'jiangmiao/auto-pairs'
 
 "-------------------------------
 call vundle#end()
@@ -37,7 +40,7 @@ let mapleader=","
 "------------------------------------
 
 "Editor Styling"
-set guifont=Monaco:h14
+set guifont=Monaco:h12
 let g:NERDTreeWinPos = "left"
 set guioptions-=T
 set guioptions-=r
@@ -76,3 +79,12 @@ nmap <Leader>a :TagbarToggle<CR>
 
 "Emmet"
 let g:user_emmet_leader_key='<C-z>'
+
+"vim-better-whitespace"
+map <Leader>w :StripWhitespace<CR>
+
+"vim-indent-guides"
+colorscheme tir_black
+set ts=4 sw=4 et
+let g:indent_guides_start_level = 2
+let g:indent_guides_guide_size = 1
