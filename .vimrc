@@ -1,6 +1,5 @@
-set nocompatible              " be iMproved, required
-filetype off                  " required
-
+set nocompatible
+filetype off
 
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
@@ -9,7 +8,7 @@ lugin 'gmarik/Vundle.vim'
 "Plugins-------------------------------
 Plugin 'tpope/vim-fugitive'
 Plugin 'L9'
-Plugin 'kien/ctrlp.vim'
+
 Plugin 'scrooloose/nerdtree'
 Plugin 'bling/vim-airline'
 Plugin '29decibel/codeschool-vim-theme'
@@ -19,11 +18,14 @@ Plugin 'scrooloose/syntastic'
 Plugin 'mileszs/ack.vim'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'majutsushi/tagbar'
+Plugin 'tpope/vim-surround'
+Plugin 'mattn/emmet-vim'
+Plugin 'kien/ctrlp.vim'
+Plugin 'bronson/vim-trailing-whitespace'
 
 "-------------------------------
-call vundle#end()            " required
-filetype plugin indent on    " required
-
+call vundle#end()            
+filetype plugin indent on    
 
 
 "THEME-------------------------------
@@ -35,25 +37,28 @@ let mapleader=","
 "------------------------------------
 
 "Editor Styling"
-set guifont=Monaco:h12
+set guifont=Monaco:h14
 let g:NERDTreeWinPos = "left"
-set guioptions-=T " Removes top toolbar
-set guioptions-=r " Removes right hand scroll bar
-set go-=L " Removes left hand scroll bar
-autocmd User Rails let b:surround_{char2nr('-')} = "<% \r %>" " displays <% %> correctly
-:set cpoptions+=$ " puts a $ marker for the end of words/lines in cw/c$ commands
+set guioptions-=T 
+set guioptions-=r 
+set go-=L
+autocmd User Rails let b:surround_{char2nr('-')} = "<% \r %>" 
+:set cpoptions+=$
 :set nu
 au WinLeave * set nocursorline nocursorcolumn
 au WinEnter * set cursorline cursorcolumn
 set cursorline cursorcolumn
 
+"Tabs"
+:set tabstop=4
+:set shiftwidth=4
+:set expandtab
+
 "Nerdtree"
 map <C-e> :NERDTreeToggle<CR>
 
 "Airline"
-let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#tabline#left_sep = ' '
-let g:airline#extensions#tabline#left_alt_sep = '|'
+set laststatus=2 t
 
 "Easy Motion"
 map <Leader>l <Plug>(easymotion-lineforward)
@@ -66,5 +71,8 @@ nmap t <Plug>(easymotion-t2)
 "T-Comment"
 nmap <Leader>c :TComment<CR>
 
-"ctrlp"
-let g:ctrlp_map = '<c-p>'
+"Tagbar"
+nmap <Leader>a :TagbarToggle<CR>
+
+"Emmet"
+let g:user_emmet_leader_key='<C-z>'
