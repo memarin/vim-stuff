@@ -21,11 +21,11 @@ Plugin 'majutsushi/tagbar'
 Plugin 'tpope/vim-surround'
 Plugin 'mattn/emmet-vim'
 Plugin 'kien/ctrlp.vim'
-Plugin 'bronson/vim-trailing-whitespace'
+Plugin 'ntpeters/vim-better-whitespace'
 
 "-------------------------------
-call vundle#end()            
-filetype plugin indent on    
+call vundle#end()
+filetype plugin indent on
 
 
 "THEME-------------------------------
@@ -39,10 +39,10 @@ let mapleader=","
 "Editor Styling"
 set guifont=Monaco:h14
 let g:NERDTreeWinPos = "left"
-set guioptions-=T 
-set guioptions-=r 
+set guioptions-=T
+set guioptions-=r
 set go-=L
-autocmd User Rails let b:surround_{char2nr('-')} = "<% \r %>" 
+autocmd User Rails let b:surround_{char2nr('-')} = "<% \r %>"
 :set cpoptions+=$
 :set nu
 au WinLeave * set nocursorline nocursorcolumn
