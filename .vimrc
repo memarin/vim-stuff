@@ -51,6 +51,7 @@ autocmd User Rails let b:surround_{char2nr('-')} = "<% \r %>"
 au WinLeave * set nocursorline nocursorcolumn
 au WinEnter * set cursorline cursorcolumn
 set cursorline cursorcolumn
+:set nowrap
 
 "Tabs"
 :set tabstop=4
