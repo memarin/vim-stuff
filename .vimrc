@@ -25,11 +25,11 @@ Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'wincent/command-t'
 Plugin 'tpope/vim-endwise'
 Plugin 'jiangmiao/auto-pairs'
+Plugin 'jlanzarotta/bufexplorer'
 
 "-------------------------------
 call vundle#end()
 filetype plugin indent on
-
 
 "THEME-------------------------------
 color codeschool
@@ -89,3 +89,6 @@ colorscheme tir_black
 set ts=4 sw=4 et
 let g:indent_guides_start_level = 2
 let g:indent_guides_guide_size = 1
+
+"BuffExplorer"
+map <Leader>e :ToggleBufExplorer<CR>
