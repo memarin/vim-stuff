@@ -3,12 +3,12 @@ filetype off
 
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
-lugin 'gmarik/Vundle.vim'
+Plugin 'gmarik/Vundle.vim'
 
 "Plugins-------------------------------
 Plugin 'tpope/vim-fugitive'
 Plugin 'L9'
-
+4
 Plugin 'scrooloose/nerdtree'
 Plugin 'bling/vim-airline'
 Plugin '29decibel/codeschool-vim-theme'
@@ -26,12 +26,15 @@ Plugin 'wincent/command-t'
 Plugin 'tpope/vim-endwise'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'jlanzarotta/bufexplorer'
+Plugin 'chrisbra/vim-diff-enhanced'
+Plugin 'tpope/vim-rails'
 
 "-------------------------------
 call vundle#end()
 filetype plugin indent on
 
 "THEME-------------------------------
+set background=dark
 color codeschool
 "------------------------------------
 
@@ -51,7 +54,6 @@ autocmd User Rails let b:surround_{char2nr('-')} = "<% \r %>"
 au WinLeave * set nocursorline nocursorcolumn
 au WinEnter * set cursorline cursorcolumn
 set cursorline cursorcolumn
-:set nowrap
 
 "Tabs"
 :set tabstop=4
@@ -62,7 +64,7 @@ set cursorline cursorcolumn
 map <C-e> :NERDTreeToggle<CR>
 
 "Airline"
-set laststatus=2 t
+set laststatus=2
 
 "Easy Motion"
 map <Leader>l <Plug>(easymotion-lineforward)
@@ -85,7 +87,7 @@ let g:user_emmet_leader_key='<C-z>'
 map <Leader>w :StripWhitespace<CR>
 
 "vim-indent-guides"
-colorscheme tir_black
+" colorscheme tir_black
 set ts=4 sw=4 et
 let g:indent_guides_start_level = 2
 let g:indent_guides_guide_size = 1
