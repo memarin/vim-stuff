@@ -16,7 +16,6 @@ Plugin 'Lokaltog/vim-easymotion'
 Plugin 'scrooloose/syntastic'
 Plugin 'mileszs/ack.vim'
 Plugin 'Valloric/YouCompleteMe'
-Plugin 'majutsushi/tagbar'
 Plugin 'tpope/vim-surround'
 Plugin 'mattn/emmet-vim'
 Plugin 'ntpeters/vim-better-whitespace'
@@ -24,9 +23,8 @@ Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'wincent/command-t'
 Plugin 'tpope/vim-endwise'
 Plugin 'jiangmiao/auto-pairs'
-Plugin 'jlanzarotta/bufexplorer'
-Plugin 'chrisbra/vim-diff-enhanced'
 Plugin 'tpope/vim-rails'
+Plugin 'godlygeek/tabular'
 
 "--------------------------------------
 call vundle#end()
@@ -50,13 +48,14 @@ set go-=L
 autocmd User Rails let b:surround_{char2nr('-')} = "<% \r %>"
 :set cpoptions+=$
 :set nu
-au WinLeave * set nocursorline nocursorcolumn
-au WinEnter * set cursorline cursorcolumn
-set cursorline cursorcolumn
+:hi CursorLine   cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=white
+:hi CursorColumn cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=white
+:nnoremap <Leader>c :set cursorline! cursorcolumn!<CR>
 
 "Tabs"
 :set tabstop=4
 :set shiftwidth=4
+:set softtabstop=4
 :set expandtab
 
 "Nerdtree"
@@ -76,9 +75,6 @@ nmap t <Plug>(easymotion-t2)
 "T-Comment"
 nmap <Leader>c :TComment<CR>
 
-"Tagbar"
-nmap <Leader>a :TagbarToggle<CR>
-
 "Emmet"
 let g:user_emmet_leader_key='<C-z>'
 
@@ -90,9 +86,6 @@ map <Leader>w :StripWhitespace<CR>
 set ts=4 sw=4 et
 let g:indent_guides_start_level = 2
 let g:indent_guides_guide_size = 1
-
-"BuffExplorer"
-map <Leader>e :ToggleBufExplorer<CR>
 
 "Fugitive"
 nnoremap <leader>gs :Gstatus<CR>
@@ -111,3 +104,9 @@ nnoremap <leader>go :Git checkout<Space>
 nnoremap <leader>gps :Dispatch! git push<CR>
 nnoremap <leader>gpl :Dispatch! git pull<CR>
 nnoremap <leader>gpb  :execute ":Git push origin " . fugitive#head(0)<CR>
+
+"Tabularize"
+nmap <Leader>a= :Tabularize /=<CR>
+vmap <Leader>a= :Tabularize /=<CR>
+nmap <Leader>a: :Tabularize /:\zs<CR>
+vmap <Leader>a: :Tabularize /:\zs<CR>
