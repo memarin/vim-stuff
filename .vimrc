@@ -14,12 +14,9 @@ Plugin '29decibel/codeschool-vim-theme'
 Plugin 'tomtom/tcomment_vim'
 Plugin 'Lokaltog/vim-easymotion'
 Plugin 'scrooloose/syntastic'
-Plugin 'mileszs/ack.vim'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'tpope/vim-surround'
-Plugin 'mattn/emmet-vim'
 Plugin 'ntpeters/vim-better-whitespace'
-Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'wincent/command-t'
 Plugin 'tpope/vim-endwise'
 Plugin 'jiangmiao/auto-pairs'
@@ -53,9 +50,9 @@ autocmd User Rails let b:surround_{char2nr('-')} = "<% \r %>"
 :nnoremap <Leader>c :set cursorline! cursorcolumn!<CR>
 
 "Tabs"
-:set tabstop=4
-:set shiftwidth=4
-:set softtabstop=4
+:set tabstop=2
+:set shiftwidth=2
+:set softtabstop=2
 :set expandtab
 
 "Nerdtree"
@@ -72,20 +69,8 @@ map <Leader>h <Plug>(easymotion-linebackward)
 nmap s <Plug>(easymotion-s2)
 nmap t <Plug>(easymotion-t2)
 
-"T-Comment"
-nmap <Leader>c :TComment<CR>
-
-"Emmet"
-let g:user_emmet_leader_key='<C-z>'
-
 "vim-better-whitespace"
 map <Leader>w :StripWhitespace<CR>
-
-"vim-indent-guides"
-" colorscheme tir_black
-set ts=4 sw=4 et
-let g:indent_guides_start_level = 2
-let g:indent_guides_guide_size = 1
 
 "Fugitive"
 nnoremap <leader>gs :Gstatus<CR>
