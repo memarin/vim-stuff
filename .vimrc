@@ -95,3 +95,23 @@ nmap <Leader>a= :Tabularize /=<CR>
 vmap <Leader>a= :Tabularize /=<CR>
 nmap <Leader>a: :Tabularize /:\zs<CR>
 vmap <Leader>a: :Tabularize /:\zs<CR>
+
+"rails-vim"
+nmap <Leader>rc :Econtroller<Space>
+nmap <Leader>rm :Emodel<Space>
+nmap <Leader>rv :Eview<Space>
+nmap <Leader>rs :Estylesheet<Space>
+nmap <Leader>rj :Ejavascript<Space>
+nmap <Leader>rh :Ehelper<Space>
+nmap <Leader>ri :Emigration<Space>
+
+nmap <Leader>rra :A<CR>
+nmap <Leader>rae :AE<CR>
+nmap <Leader>ras :AS<CR>
+nmap <Leader>rav :AV<CR>
+nmap <Leader>rat :AT<CR>
+nmap <Leader>rad :AD<CR>
+
+nmap <Leader>rgc :Rgenerate controller<Space>
+nmap <Leader>rgm :Rgenerate model<Space>
+nmap <Leader>rgi :Rgenerate migration<Space>
