@@ -24,6 +24,7 @@ Plugin 'tpope/vim-rails'
 Plugin 'godlygeek/tabular'
 Plugin 'slim-template/vim-slim'
 Plugin 'ecomba/vim-ruby-refactoring'
+Plugin 'cakebaker/scss-syntax.vim'
 
 "--------------------------------------
 call vundle#end()
@@ -126,3 +127,4 @@ nmap <Leader>rgc :Rgenerate controller<Space>
 nmap <Leader>rgm :Rgenerate model<Space>
 nmap <Leader>rgi :Rgenerate migration<Space>
 
+nmap <Leader>f :find<Space>
