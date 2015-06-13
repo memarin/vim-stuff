@@ -14,7 +14,6 @@ Plugin '29decibel/codeschool-vim-theme'
 Plugin 'tomtom/tcomment_vim'
 Plugin 'Lokaltog/vim-easymotion'
 Plugin 'scrooloose/syntastic'
-Plugin 'Valloric/YouCompleteMe'
 Plugin 'tpope/vim-surround'
 Plugin 'ntpeters/vim-better-whitespace'
 Plugin 'wincent/command-t'
@@ -25,6 +24,7 @@ Plugin 'godlygeek/tabular'
 Plugin 'slim-template/vim-slim'
 Plugin 'ecomba/vim-ruby-refactoring'
 Plugin 'cakebaker/scss-syntax.vim'
+Plugin 'airblade/vim-gitgutter'
 
 "--------------------------------------
 call vundle#end()
