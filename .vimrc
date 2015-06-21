@@ -16,6 +16,7 @@ Plugin 'Lokaltog/vim-easymotion'
 Plugin 'scrooloose/syntastic'
 Plugin 'tpope/vim-surround'
 Plugin 'ntpeters/vim-better-whitespace'
+Plugin 'antlypls/vim-colors-codeschool'
 Plugin 'wincent/command-t'
 Plugin 'tpope/vim-endwise'
 Plugin 'jiangmiao/auto-pairs'
@@ -25,6 +26,8 @@ Plugin 'slim-template/vim-slim'
 Plugin 'ecomba/vim-ruby-refactoring'
 Plugin 'cakebaker/scss-syntax.vim'
 Plugin 'airblade/vim-gitgutter'
+Plugin 'terryma/vim-multiple-cursors'
+Plugin 'SirVer/ultisnips'
 
 "--------------------------------------
 call vundle#end()
