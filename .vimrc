@@ -11,22 +11,18 @@ Plugin 'L9'
 Plugin 'scrooloose/nerdtree'
 Plugin 'bling/vim-airline'
 Plugin '29decibel/codeschool-vim-theme'
-Plugin 'tomtom/tcomment_vim'
 Plugin 'Lokaltog/vim-easymotion'
 Plugin 'scrooloose/syntastic'
 Plugin 'tpope/vim-surround'
 Plugin 'ntpeters/vim-better-whitespace'
-Plugin 'antlypls/vim-colors-codeschool'
 Plugin 'wincent/command-t'
 Plugin 'tpope/vim-endwise'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'tpope/vim-rails'
 Plugin 'godlygeek/tabular'
 Plugin 'slim-template/vim-slim'
-Plugin 'ecomba/vim-ruby-refactoring'
 Plugin 'cakebaker/scss-syntax.vim'
 Plugin 'airblade/vim-gitgutter'
-Plugin 'terryma/vim-multiple-cursors'
 Plugin 'SirVer/ultisnips'
 
 "--------------------------------------
@@ -53,7 +49,7 @@ set cpoptions+=$
 set nu
 hi CursorLine   cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=white
 hi CursorColumn cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=white
-nnoremap <Leader>c :set cursorline! cursorcolumn!<CR>
+"nnoremap <Leader>c :set cursorline! cursorcolumn!<CR>
 nmap <Leader>sx :vsplit .vimrc<CR>
 
 "Tabs"
@@ -67,9 +63,6 @@ map <C-e> :NERDTreeToggle<CR>
 
 "Airline"
 set laststatus=2
-
-"T-Command"
-nmap <S-S> :CommandT
 
 "Easy Motion"
 map <Leader>l <Plug>(easymotion-lineforward)
@@ -131,3 +124,6 @@ nmap <Leader>rgm :Rgenerate model<Space>
 nmap <Leader>rgi :Rgenerate migration<Space>
 
 nmap <Leader>f :find<Space>
+
+"UltiSnips"
+nmap <Leader>ue :UltiSnipsEdit<CR>
