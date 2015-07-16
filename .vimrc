@@ -52,6 +52,10 @@ hi CursorColumn cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=whi
 "nnoremap <Leader>c :set cursorline! cursorcolumn!<CR>
 nmap <Leader>sx :vsplit .vimrc<CR>
 
+"Editor Commands"
+nmap <Leader>v :vsplit<Space>
+nmap <Leader>cp :let @+=expand("%")<CR>
+map ,b Obyebug<ESC>
 "Tabs"
 set tabstop=2
 set shiftwidth=2
