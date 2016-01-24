@@ -8,7 +8,6 @@ Plugin 'gmarik/Vundle.vim'
 "Plugins-------------------------------
 Plugin 'tpope/vim-fugitive'
 Plugin 'L9'
-Plugin 'scrooloose/nerdtree'
 Plugin 'bling/vim-airline'
 Plugin '29decibel/codeschool-vim-theme'
 Plugin 'Lokaltog/vim-easymotion'
@@ -26,6 +25,7 @@ Plugin 'airblade/vim-gitgutter'
 Plugin 'SirVer/ultisnips'
 Plugin 'tpope/vim-commentary'
 Plugin 'tpope/vim-markdown'
+Plugin 'tpope/vim-vinegar'
 
 "--------------------------------------
 call vundle#end()
