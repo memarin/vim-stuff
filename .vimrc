@@ -45,13 +45,20 @@ set guifont=Monaco:h12
 let g:NERDTreeWinPos = "left"
 set guioptions-=T
 set guioptions-=r
+set guioptions-=e
 set go-=L
 autocmd User Rails let b:surround_{char2nr('-')} = "<% \r %>"
 set cpoptions+=$
 "nnoremap <Leader>c :set cursorline! cursorcolumn!<CR>
 set cursorline! cursorcolumn!
 nmap <Leader>sx :vsplit .vimrc<CR>
+nnoremap <C-Left> :tabprevious<CR>
+nnoremap <C-Right> :tabnext<CR>
 
+
+:hi TabLineFill ctermfg=LightGreen ctermbg=DarkGreen
+:hi TabLine ctermfg=Blue ctermbg=Yellow
+:hi TabLineSel ctermfg=Red ctermbg=Yellow
 "switch line numbering"
 :au FocusLost * :set number
 :au FocusGained * :set relativenumber
@@ -62,9 +69,13 @@ set tabstop=2
 set shiftwidth=2
 set softtabstop=2
 set expandtab
+nnoremap <C-Left> :tabprevious<CR>
+nnoremap <C-Right> :tabnext<CR>
+let g:airline#extensions#tabline#enabled = 1
+nmap <Leader>tc :tabclose<CR>
 
 "Nerdtree"
-map <C-e> :NERDTreeToggle<CR>
+map <Leader>n :NERDTreeToggle<CR>
 
 "Airline"
 set laststatus=2
