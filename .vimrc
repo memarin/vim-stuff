@@ -26,6 +26,9 @@ Plugin 'SirVer/ultisnips'
 Plugin 'tpope/vim-commentary'
 Plugin 'tpope/vim-markdown'
 Plugin 'tpope/vim-vinegar'
+Plugin 'tpope/vim-eunuch'
+Plugin 'tpope/vim-markdown'
+Plugin 'rking/ag.vim'
 
 "--------------------------------------
 call vundle#end()
@@ -47,14 +50,19 @@ set guioptions-=T
 set guioptions-=r
 set guioptions-=e
 set go-=L
+set hlsearch
 autocmd User Rails let b:surround_{char2nr('-')} = "<% \r %>"
 set cpoptions+=$
 "nnoremap <Leader>c :set cursorline! cursorcolumn!<CR>
 set cursorline! cursorcolumn!
-nmap <Leader>sx :vsplit .vimrc<CR>
+nmap <Leader>sx :vsplit ~/.vimrc<CR>
 nnoremap <C-Left> :tabprevious<CR>
 nnoremap <C-Right> :tabnext<CR>
 
+"Buffers"
+nnoremap <C-x> :bprev<CR>
+nnoremap <C-c> :bnext<CR>
+nnoremap <C-b> :bd<CR>
 
 :hi TabLineFill ctermfg=LightGreen ctermbg=DarkGreen
 :hi TabLine ctermfg=Blue ctermbg=Yellow
@@ -150,3 +158,6 @@ map <Leader>c :CtrlP<CR>
 
 "vim-commentary"
 map <Leader>t gcc
+
+"pry-byebug"
+map <Leader>b obinding.pry<ESC>
