@@ -44,6 +44,7 @@ let mapleader=","
 "--------------------------------------
 
 "Editor Styling"
+set relativenumber
 set guifont=Monaco:h12
 let g:NERDTreeWinPos = "left"
 set guioptions-=T
