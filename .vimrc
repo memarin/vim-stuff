@@ -52,6 +52,7 @@ set guioptions-=r
 set guioptions-=e
 set go-=L
 set hlsearch
+set listchars=tab:▸\ ,eol:¬
 autocmd User Rails let b:surround_{char2nr('-')} = "<% \r %>"
 set cpoptions+=$
 "nnoremap <Leader>c :set cursorline! cursorcolumn!<CR>
