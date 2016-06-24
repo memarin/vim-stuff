@@ -29,6 +29,8 @@ Plugin 'tpope/vim-vinegar'
 Plugin 'tpope/vim-eunuch'
 Plugin 'tpope/vim-markdown'
 Plugin 'rking/ag.vim'
+Plugin 'xolox/vim-notes'
+Plugin 'xolox/vim-misc'
 
 "--------------------------------------
 call vundle#end()
