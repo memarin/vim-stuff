@@ -57,6 +57,7 @@ set hlsearch
 set listchars=tab:▸\ ,eol:¬
 autocmd User Rails let b:surround_{char2nr('-')} = "<% \r %>"
 set cpoptions+=$
+setlocal foldmethod=indent
 "nnoremap <Leader>c :set cursorline! cursorcolumn!<CR>
 set cursorline! cursorcolumn!
 nmap <Leader>sx :vsplit ~/.vimrc<CR>
@@ -165,3 +166,6 @@ map <Leader>t gcc
 
 "pry-byebug"
 map <Leader>b obinding.pry<ESC>
+
+"vim-notes"
+map <Leader>sn :SearchNotes
