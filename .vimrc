@@ -168,4 +168,5 @@ map <Leader>t gcc
 map <Leader>b obinding.pry<ESC>
 
 "vim-notes"
+let g:notes_suffix = '.md'
 map <Leader>sn :SearchNotes<Space>
