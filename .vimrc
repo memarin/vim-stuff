@@ -168,4 +168,4 @@ map <Leader>t gcc
 map <Leader>b obinding.pry<ESC>
 
 "vim-notes"
-map <Leader>sn :SearchNotes
+map <Leader>sn :SearchNotes<Space>
