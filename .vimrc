@@ -27,7 +27,6 @@ Plugin 'tpope/vim-commentary'
 Plugin 'tpope/vim-markdown'
 Plugin 'tpope/vim-vinegar'
 Plugin 'tpope/vim-eunuch'
-Plugin 'tpope/vim-markdown'
 Plugin 'rking/ag.vim'
 Plugin 'xolox/vim-notes'
 Plugin 'xolox/vim-misc'
@@ -38,7 +37,7 @@ filetype plugin indent on
 
 "THEME---------------------------------
 set background=dark
-color codeschool
+
 "--------------------------------------
 
 "Leader key----------------------------
